@@ -1,0 +1,58 @@
+{
+  "extensionName": {
+    "message": "Drag & Restore"
+  },
+  "extensionDescription": {
+    "message": "Super-drag links and images, search dragged text, and quickly restore recently closed tabs."
+  },
+  "actionTitle": {
+    "message": "Restore recently closed tab"
+  },
+  "actionTitleWithCount": {
+    "message": "Restore recently closed tab ($COUNT$ recent)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "restoreLatestMenu": {
+    "message": "Restore most recently closed tab"
+  },
+  "recentTabsMenu": {
+    "message": "Recently closed tabs"
+  },
+  "restoreAllMenu": {
+    "message": "Restore all"
+  },
+  "untitledTab": {
+    "message": "Untitled tab"
+  },
+  "optionsTitle": {
+    "message": "Drag & Restore settings"
+  },
+  "dragEnabledLabel": {
+    "message": "Enable super drag"
+  },
+  "dragTextSearchLabel": {
+    "message": "Search dragged text with the default search engine (asks permission when first enabled)"
+  },
+  "dragImageLabel": {
+    "message": "Open dragged images"
+  },
+  "openInBackgroundLabel": {
+    "message": "Open dragged content in background tabs"
+  },
+  "minDistanceLabel": {
+    "message": "Minimum drag distance (pixels)"
+  },
+  "privacyHint": {
+    "message": "Links, images, and tab restore stay local. Text search is sent to Firefox's default search engine only after you grant permission."
+  },
+  "savedMessage": {
+    "message": "Saved"
+  },
+  "searchPermissionDenied": {
+    "message": "Text-search permission not granted"
+  }
+}
