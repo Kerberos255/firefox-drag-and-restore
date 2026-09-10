@@ -8,6 +8,7 @@ const DEFAULTS = Object.freeze({
   dragTextSearch: false,
   dragImage: true,
   openInBackground: false,
+  newTabPosition: "end",
   minDistance: 8
 });
 
@@ -28,6 +29,28 @@ function validOpenableUrl(value) {
   }
 }
 
+async function createTabOptions(settings, sender, extra = {}) {
+  const options = {
+    ...extra,
+    active: !settings.openInBackground
+  };
+
+  if (!sender?.tab) return options;
+
+  options.windowId = sender.tab.windowId;
+
+  if (settings.newTabPosition === "after-current") {
+    options.index = sender.tab.index + 1;
+  } else {
+    // tabs.query() does not require the broad "tabs" permission when only
+    // non-sensitive properties such as windowId/index are used.
+    const tabs = await browser.tabs.query({ windowId: sender.tab.windowId });
+    options.index = tabs.length;
+  }
+
+  return options;
+}
+
 async function openDragTarget(message, sender) {
   const settings = await getSettings();
   if (!settings.dragEnabled) return;
@@ -43,9 +66,7 @@ async function openDragTarget(message, sender) {
     });
     if (!allowed) return;
 
-    const tab = await browser.tabs.create({
-      active: !settings.openInBackground
-    });
+    const tab = await browser.tabs.create(await createTabOptions(settings, sender));
     await browser.search.query({
       text: value.trim(),
       tabId: tab.id
@@ -56,10 +77,7 @@ async function openDragTarget(message, sender) {
   if (kind === "image" && !settings.dragImage) return;
 
   if ((kind === "link" || kind === "image") && validOpenableUrl(value)) {
-    await browser.tabs.create({
-      url: value,
-      active: !settings.openInBackground
-    });
+    await browser.tabs.create(await createTabOptions(settings, sender, { url: value }));
   }
 }
 

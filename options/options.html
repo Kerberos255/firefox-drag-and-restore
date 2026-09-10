@@ -30,6 +30,18 @@
       <span data-i18n="openInBackgroundLabel">在后台标签页打开拖拽内容</span>
     </label>
 
+    <fieldset>
+      <legend data-i18n="newTabPositionLabel">拖拽新标签页位置</legend>
+      <label class="row">
+        <input type="radio" name="newTabPosition" value="end">
+        <span data-i18n="newTabPositionEnd">所有标签页之后</span>
+      </label>
+      <label class="row">
+        <input type="radio" name="newTabPosition" value="after-current">
+        <span data-i18n="newTabPositionAfterCurrent">当前标签页之后</span>
+      </label>
+    </fieldset>
+
     <label class="distance">
       <span data-i18n="minDistanceLabel">最小拖拽距离（像素）</span>
       <input id="minDistance" type="number" min="4" max="64" step="1">

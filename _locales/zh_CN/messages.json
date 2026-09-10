@@ -43,6 +43,15 @@
   "openInBackgroundLabel": {
     "message": "在后台标签页打开拖拽内容"
   },
+  "newTabPositionLabel": {
+    "message": "拖拽新标签页位置"
+  },
+  "newTabPositionEnd": {
+    "message": "所有标签页之后"
+  },
+  "newTabPositionAfterCurrent": {
+    "message": "当前标签页之后"
+  },
   "minDistanceLabel": {
     "message": "最小拖拽距离（像素）"
   },

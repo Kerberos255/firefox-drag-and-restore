@@ -43,6 +43,15 @@
   "openInBackgroundLabel": {
     "message": "Open dragged content in background tabs"
   },
+  "newTabPositionLabel": {
+    "message": "Position for dragged-content tabs"
+  },
+  "newTabPositionEnd": {
+    "message": "After all tabs"
+  },
+  "newTabPositionAfterCurrent": {
+    "message": "After the current tab"
+  },
   "minDistanceLabel": {
     "message": "Minimum drag distance (pixels)"
   },

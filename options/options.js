@@ -6,6 +6,7 @@ const DEFAULTS = {
   dragTextSearch: false,
   dragImage: true,
   openInBackground: false,
+  newTabPosition: "end",
   minDistance: 8
 };
 
@@ -30,6 +31,12 @@ async function load() {
     Boolean(settings.dragTextSearch && searchConsent);
   document.getElementById("minDistance").value = settings.minDistance;
 
+  const position = settings.newTabPosition === "after-current" ? "after-current" : "end";
+  const positionInput = document.querySelector(
+    `input[name="newTabPosition"][value="${position}"]`
+  );
+  if (positionInput) positionInput.checked = true;
+
   if (settings.dragTextSearch && !searchConsent) {
     await browser.storage.local.set({ dragTextSearch: false });
   }
@@ -47,10 +54,15 @@ function showStatus(messageKey) {
 }
 
 async function saveOrdinarySettings() {
+  const selectedPosition = document.querySelector(
+    'input[name="newTabPosition"]:checked'
+  )?.value;
+
   await browser.storage.local.set({
     dragEnabled: document.getElementById("dragEnabled").checked,
     dragImage: document.getElementById("dragImage").checked,
     openInBackground: document.getElementById("openInBackground").checked,
+    newTabPosition: selectedPosition === "after-current" ? "after-current" : "end",
     minDistance: Math.min(
       64,
       Math.max(4, Number(document.getElementById("minDistance").value) || 8)
@@ -68,6 +80,7 @@ async function handleTextSearchToggle(event) {
     return;
   }
 
+  // This request is deliberately made inside the user's change event.
   const granted = await browser.permissions.request({
     data_collection: ["searchTerms"]
   });
@@ -97,5 +110,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       "change",
       () => saveOrdinarySettings().catch(console.error)
     );
+  }
+
+  for (const input of document.querySelectorAll('input[name="newTabPosition"]')) {
+    input.addEventListener("change", () => saveOrdinarySettings().catch(console.error));
   }
 });

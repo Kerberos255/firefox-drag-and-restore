@@ -26,6 +26,19 @@ h1 {
   align-items: center;
 }
 
+fieldset {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 10px 12px 12px;
+  border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+  border-radius: 6px;
+}
+
+legend {
+  padding: 0 5px;
+}
+
 .distance {
   justify-content: space-between;
 }

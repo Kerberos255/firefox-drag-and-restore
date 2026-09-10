@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1 — 2026-09-11
+
+- Added a setting for where dragged-content tabs open: after all tabs or immediately after the current tab.
+- The new setting applies to dragged links, images, and optional dragged-text search results.
+- Existing behavior remains the default (`After all tabs`).
+
 ## 1.0 — 2026-09-10
 
 Initial public release.

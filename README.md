@@ -2,7 +2,7 @@
 
 A small Firefox extension that adds two convenient browsing behaviors:
 
-- Super drag: drag a link or image and release it to open it in a new tab; optionally drag selected text to search with Firefox's configured search engine.
+- Super drag: drag a link or image and release it to open it in a new tab; optionally drag selected text to search with Firefox's configured search engine. New dragged-content tabs can be placed either after all tabs or immediately after the current tab.
 - Restore closed tabs: click the toolbar button to restore the most recently closed tab; right-click it to pick from recent tabs or restore all.
 
 ## Privacy
@@ -51,7 +51,7 @@ Requires Python 3 only:
 python tools/build.py
 ```
 
-Output: `dist/drag-and-restore-1.0.xpi`.
+Output: `dist/drag-and-restore-1.1.xpi`.
 
 ## Test
 
