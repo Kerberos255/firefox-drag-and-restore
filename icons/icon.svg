@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
-  <path d="M35 24 19 40l16 16" fill="none" stroke="context-fill" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21 40h31c15 0 26 11 26 25S67 89 53 89H39" fill="none" stroke="context-fill" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <style>
+    .restore { fill: none; stroke: #4b4bc4; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) { .restore { stroke: #aeb2ff; } }
+  </style>
+  <path class="restore" d="M12 7 6 12l6 5M7 12h11c5 0 8 3.5 8 7.5S23 27 18 27h-4"/>
 </svg>
