@@ -1,0 +1,45 @@
+html {
+  color-scheme: light dark;
+  font: menu;
+}
+
+body {
+  margin: 0;
+  padding: 18px;
+  min-width: 340px;
+}
+
+main {
+  display: grid;
+  gap: 14px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 4px;
+}
+
+.row,
+.distance {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.distance {
+  justify-content: space-between;
+}
+
+.distance input {
+  width: 72px;
+}
+
+.hint {
+  opacity: 0.72;
+  margin: 6px 0 0;
+}
+
+.saved {
+  min-height: 1.2em;
+  margin: 0;
+}
