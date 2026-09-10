@@ -1,35 +1,30 @@
 # Drag & Restore
 
-A small Firefox extension that brings back two convenient browsing behaviors:
+A small Firefox extension that adds two convenient browsing behaviors:
 
-- Super drag: drag a link or image and release it to open it in a new tab; drag selected text to search with Firefox's default search engine.
+- Super drag: drag a link or image and release it to open it in a new tab; optionally drag selected text to search with Firefox's configured search engine.
 - Restore closed tabs: click the toolbar button to restore the most recently closed tab; right-click it to pick from recent tabs or restore all.
 
 ## Privacy
 
-The extension has no analytics, telemetry, remote code, advertising, or network backend.
+The extension has no analytics, telemetry, remote code, advertising, tracking, or developer-operated network backend.
 
-Core link/image dragging and tab restoration declare no required data transmission. Text search is disabled by default. If the user enables it, Firefox asks for the optional `searchTerms` data-transmission permission before any dragged text can be sent to the user's configured default search engine:
+Core link/image dragging and tab restoration declare no required data transmission. Text search is disabled by default. If the user enables it, Firefox asks for the optional `searchTerms` data-transmission permission before dragged text can be sent to the user's configured search engine.
 
-```json
-"data_collection_permissions": {
-  "required": ["none"],
-  "optional": ["searchTerms"]
-}
-```
+See [PRIVACY.md](PRIVACY.md) for the full privacy policy.
 
 ## Firefox support
 
 - Manifest V3
 - Firefox 140+
-- Intended for current Firefox Release, including Firefox 155.x
+- Intended for current Firefox Release and ESR
 
-The minimum is intentionally Firefox 140 because new AMO submissions must declare Firefox's built-in data-collection consent metadata.
+Firefox 140 is the minimum supported version because the extension uses Firefox's built-in data-collection permission metadata.
 
 ## Permissions
 
 - `sessions`: read and restore recently closed tabs.
-- `search`: search text through Firefox's configured search engine.
+- `search`: search text through Firefox's configured search engine when the optional text-search feature is enabled.
 - `storage`: store local extension settings.
 - `menus`: show recent closed tabs in the toolbar button context menu.
 
@@ -58,17 +53,16 @@ python tools/build.py
 
 Output: `dist/drag-and-restore-1.0.xpi`.
 
-## AMO preparation
+## Test
 
-Before public submission:
+```bash
+npm test
+```
 
-1. Replace the provisional extension ID if desired, then keep it stable forever.
-2. Add final project/support/homepage URLs.
-3. Create final AMO listing text and screenshots.
-4. Run Mozilla's current `web-ext lint`.
-5. Test temporary installation on current Firefox Release and ESR.
-6. Submit the XPI/source to AMO for signing and review.
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See [LICENSE](LICENSE).
