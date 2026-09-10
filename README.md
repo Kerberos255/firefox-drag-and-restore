@@ -56,7 +56,7 @@ Requires Python 3 only:
 python tools/build.py
 ```
 
-Output: `dist/drag-and-restore-0.1.2.xpi`.
+Output: `dist/drag-and-restore-1.0.xpi`.
 
 ## AMO preparation
 
