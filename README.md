@@ -32,19 +32,10 @@ The minimum is intentionally Firefox 140 because new AMO submissions must declar
 - `search`: search text through Firefox's configured search engine.
 - `storage`: store local extension settings.
 - `menus`: show recent closed tabs in the toolbar button context menu.
+
 The content script runs only on normal `http` and `https` web pages as declared by `content_scripts.matches`.
 
 No `tabs` permission, privileged Mozilla API, native messaging, or remote-code permission is requested.
-
-## Provenance
-
-This is an independent community reimplementation inspired by the user-facing behavior of Mozilla's open-source CPManager project:
-
-https://github.com/mozilla-extensions/cpmanager
-
-CPManager is licensed under MPL-2.0. This project does not use the CPManager extension ID, Mozilla branding, privileged `mozillaAddons` APIs, its China-pack experiment API, tracking code, or its artwork.
-
-This project is not affiliated with or endorsed by Mozilla.
 
 ## Local testing
 
@@ -65,7 +56,7 @@ Requires Python 3 only:
 python tools/build.py
 ```
 
-Output: `dist/drag-and-restore-0.1.0.xpi`.
+Output: `dist/drag-and-restore-0.1.2.xpi`.
 
 ## AMO preparation
 
