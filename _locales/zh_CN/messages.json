@@ -1,0 +1,58 @@
+{
+  "extensionName": {
+    "message": "Drag & Restore"
+  },
+  "extensionDescription": {
+    "message": "超级拖拽打开链接、图片或搜索文字，并快速恢复最近关闭的标签页。"
+  },
+  "actionTitle": {
+    "message": "恢复最近关闭的标签页"
+  },
+  "actionTitleWithCount": {
+    "message": "恢复最近关闭的标签页（最近 $COUNT$ 项）",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "restoreLatestMenu": {
+    "message": "恢复最近关闭的标签页"
+  },
+  "recentTabsMenu": {
+    "message": "最近关闭的标签页"
+  },
+  "restoreAllMenu": {
+    "message": "恢复全部"
+  },
+  "untitledTab": {
+    "message": "未命名标签页"
+  },
+  "optionsTitle": {
+    "message": "Drag & Restore 设置"
+  },
+  "dragEnabledLabel": {
+    "message": "启用超级拖拽"
+  },
+  "dragTextSearchLabel": {
+    "message": "拖拽文字时使用默认搜索引擎搜索（首次启用会请求授权）"
+  },
+  "dragImageLabel": {
+    "message": "拖拽图片时打开图片"
+  },
+  "openInBackgroundLabel": {
+    "message": "在后台标签页打开拖拽内容"
+  },
+  "minDistanceLabel": {
+    "message": "最小拖拽距离（像素）"
+  },
+  "privacyHint": {
+    "message": "链接、图片和标签页功能完全本地运行；文字搜索仅在你授权后交给 Firefox 的默认搜索引擎。"
+  },
+  "savedMessage": {
+    "message": "已保存"
+  },
+  "searchPermissionDenied": {
+    "message": "未授权文字搜索"
+  }
+}
