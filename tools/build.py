@@ -13,7 +13,6 @@ include = [
     "manifest.json",
     "background.js",
     "LICENSE",
-    "NOTICE.md",
     "_locales",
     "content",
     "icons",
