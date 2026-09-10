@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag & Restore</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1 data-i18n="optionsTitle">Drag & Restore</h1>
+
+    <label class="row">
+      <input id="dragEnabled" type="checkbox">
+      <span data-i18n="dragEnabledLabel">启用超级拖拽</span>
+    </label>
+
+    <label class="row">
+      <input id="dragTextSearch" type="checkbox">
+      <span data-i18n="dragTextSearchLabel">拖拽文字时使用默认搜索引擎搜索</span>
+    </label>
+
+    <label class="row">
+      <input id="dragImage" type="checkbox">
+      <span data-i18n="dragImageLabel">拖拽图片时打开图片</span>
+    </label>
+
+    <label class="row">
+      <input id="openInBackground" type="checkbox">
+      <span data-i18n="openInBackgroundLabel">在后台标签页打开拖拽内容</span>
+    </label>
+
+    <label class="distance">
+      <span data-i18n="minDistanceLabel">最小拖拽距离（像素）</span>
+      <input id="minDistance" type="number" min="4" max="64" step="1">
+    </label>
+
+    <p class="hint" data-i18n="privacyHint">所有功能均在本地运行，不收集或上传数据。</p>
+    <p id="saved" class="saved" aria-live="polite"></p>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
