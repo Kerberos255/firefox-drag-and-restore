@@ -1,0 +1,9 @@
+{
+  "name": "drag-and-restore",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/smoke.mjs"
+  }
+}
